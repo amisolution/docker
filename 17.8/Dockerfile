@@ -41,6 +41,10 @@ RUN apt-get update \
         --install-component ruby \
         --install-component nodejs \
         --install-component wp-toolkit \
+        --install-component openssh \
+        --install-component openssh-server \ openssh-clients openssl-libs
+        --install-component openssh-clients \
+        --install-component openssl-libs \
     && plesk bin init_conf --init \
         -email changeme@example.com \
         -passwd changeme \
@@ -71,4 +75,4 @@ CMD /run.sh
 # 8880 - plesk via http
 # 8443 - plesk via https
 # 8447 - autoinstaller
-EXPOSE 21 80 443 8880 8443 8447
+EXPOSE 21 22 80 443 8880 8443 8447
