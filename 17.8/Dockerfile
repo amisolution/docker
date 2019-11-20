@@ -42,7 +42,7 @@ RUN apt-get update \
         --install-component nodejs \
         --install-component wp-toolkit \
         --install-component openssh \
-        --install-component openssh-server \ openssh-clients openssl-libs
+        --install-component openssh-server \
         --install-component openssh-clients \
         --install-component openssl-libs \
     && plesk bin init_conf --init \
